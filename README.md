@@ -71,7 +71,7 @@ make mgba
 ### 🛑 To Stop the Docker Container
 
 ```bash
-./cs2110docker-c.sh stop
+./cs2110docker-gba.sh stop
 ```
 
 ---
