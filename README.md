@@ -87,22 +87,4 @@ make mgba
 | `cs2110docker-c.sh`   | Script to manage Docker container        |
 | `Makefile`            | Build logic, GDB support, emulator calls |
 
----
 
-## 📸 Screenshots
-
-*Coming soon!* Add images like `images/fires.png`, `images/heaven.png`, or even a GIF of gameplay.
-
----
-
-## 👤 Author
-
-**Vishruth Anand**  
-CS 2110 - Georgia Tech  
-*The Walk of Fire*
-
----
-
-## 📜 License
-
-This project is for educational use only — developed as part of the CS 2110 coursework.
