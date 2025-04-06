@@ -9,7 +9,7 @@ Inspired by games like *World's Hardest Game*, this adventure drops you into hel
 
 You just died. For your soul’s chance at heaven, you must survive the fire, avoid being hit in the heart, and make it to the right side of the screen.  
 
-Features:
+### Features:
 - 🔥 **Dynamic Fireballs:** Fall and rise in randomized patterns.
 - 🧘‍♂️ **Karma System:** Dodge fireballs to earn karma.
 - 🧱 **State Machine:** Title screen, gameplay, win/lose screens, and "Impossible Mode".
@@ -34,9 +34,9 @@ Features:
 
 ### 📦 Requirements
 
-- [Docker](https://www.docker.com/products/docker-desktop)
-- CS 2110 Docker Image (`gtcs2110/cs2110docker-c:stable-gba`)
-- mGBA emulator (included in CS 2110 Docker setup)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- CS 2110 Docker Image: `gtcs2110/cs2110docker-c:stable-gba`
+- The mGBA emulator (runs automatically inside the container)
 
 ---
 
@@ -47,12 +47,62 @@ Features:
 ```bash
 git clone https://github.com/vishruthanand08/walk-of-fire-gba.git
 cd walk-of-fire-gba
+```
 
-#### 2. Start Docker container
-'''bash
+#### 2. Start the Docker Container
+
+```bash
 ./cs2110docker-c.sh start
+```
 
-#### 3. Run game 
-'''bash
+> This mounts your project into the Docker container and pulls the correct image.
+
+#### 3. Inside the Docker Container, Run:
+
+```bash
 cd host
 make mgba
+```
+
+> This compiles the `.gba` ROM and automatically launches it in the mGBA emulator.
+
+---
+
+### 🛑 To Stop the Docker Container
+
+```bash
+./cs2110docker-c.sh stop
+```
+
+---
+
+## 📁 Project Structure
+
+| File / Folder         | Purpose                                 |
+|------------------------|------------------------------------------|
+| `main.c`              | Game state machine and gameplay logic    |
+| `gba.c` / `gba.h`     | DMA, pixel, and screen drawing functions |
+| `images/`             | Sprite/image assets from nin10kit        |
+| `client.c`            | Docker socket bridge for emulator        |
+| `cs2110docker-c.sh`   | Script to manage Docker container        |
+| `Makefile`            | Build logic, GDB support, emulator calls |
+
+---
+
+## 📸 Screenshots
+
+*Coming soon!* Add images like `images/fires.png`, `images/heaven.png`, or even a GIF of gameplay.
+
+---
+
+## 👤 Author
+
+**Vishruth Anand**  
+CS 2110 - Georgia Tech  
+*The Walk of Fire*
+
+---
+
+## 📜 License
+
+This project is for educational use only — developed as part of the CS 2110 coursework.
