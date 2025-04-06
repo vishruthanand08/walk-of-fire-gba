@@ -52,7 +52,7 @@ cd walk-of-fire-gba
 #### 2. Start the Docker Container
 
 ```bash
-./cs2110docker-c.sh start
+./cs2110docker-gba.sh start
 ```
 
 > This mounts your project into the Docker container and pulls the correct image.
