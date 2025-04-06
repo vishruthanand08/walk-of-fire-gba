@@ -1,7 +1,7 @@
 # 🔥 The Walk of Fire
 
 **The Walk of Fire** is a Game Boy Advance (GBA) game developed in C for CS 2110 at Georgia Tech.  
-Inspired by games like *World's Hardest Game*, this adventure drops you into hell where you must guide your soul through waves of fire to reach salvation.
+This adventure drops you into hell where you must guide your soul through waves of fire to reach salvation.
 
 ---
 
