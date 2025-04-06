@@ -1,7 +1,7 @@
 # The Walk of Fire 🔥
 
-**The Walk of Fire** is a Game Boy Advance (GBA) game developed in C for CS 2110 at Georgia Tech.  
-Inspired by *World's Hardest Game*, this GBA adventure drops you into hell, where you must guide your soul through waves of fire to reach salvation.
+The Walk of Fire is a Game Boy Advance (GBA) game developed in C for CS 2110 at Georgia Tech.  
+Inspired by World's Hardest Game, this GBA adventure drops you into hell, where you must guide your soul through waves of fire to reach salvation.
 
 ## Gameplay 🎮
 
@@ -39,7 +39,7 @@ You just died. For your soul’s chance at heaven, you must survive the fire, av
    cd walk-of-fire-gba
    ```
 
-2. Start the Docker Container**
+2. Start the Docker Container
 
    ```bash
    ./cs2110docker-c.sh start
@@ -70,7 +70,7 @@ You just died. For your soul’s chance at heaven, you must survive the fire, av
 |---------------------|--------------------------------------------------|
 | `main.c`            | Game logic, state machine                        |
 | `gba.c` / `gba.h`   | Drawing utilities, screen & pixel control        |
-| `images/`           | Sprite assets (created with nin10kit)           |
+| `images/`           | Sprite assets (created with nin10kit)            |
 | `client.c`          | Sends ROM to emulator through Docker             |
 | `cs2110docker-c.sh` | Script for managing Docker container             |
 | `Makefile`          | Build process, GBA toolchain commands            |
