@@ -1,0 +1,26 @@
+(base) vishruthanand@lawn-10-91-6-230 submission % # GBA build artifacts
+*.o
+*.elf
+*.gba
+*.sav
+*.log
+
+# Submission archive
+submission.tar.gz
+
+# Object files in subdirectories
+*/*.o
+*/*/*.o
+*/*.sav
+*/*/*.sav
+
+# Editor/OS files
+.DS_Store
+*.swp
+*.swo
+
+# Backup files
+*~
+
+# Ignore Docker/mGBA client
+client
