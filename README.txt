@@ -3,8 +3,6 @@
 **The Walk of Fire** is a Game Boy Advance (GBA) game developed in C for CS 2110 at Georgia Tech.  
 Inspired by *World's Hardest Game*, this GBA adventure drops you into hell, where you must guide your soul through waves of fire to reach salvation.
 
----
-
 ## Gameplay 🎮
 
 You just died. For your soul’s chance at heaven, you must survive the fire, avoid being hit in the heart, and make it to the right side of the screen.
@@ -18,37 +16,30 @@ You just died. For your soul’s chance at heaven, you must survive the fire, av
 - 🎨 Custom Sprites: Created using [nin10kit](https://github.com/TricksterGuy/nin10kit/raw/master/readme.pdf).
 - 😈 Impossible Mode: Unlocked after completing normal mode.
 
----
 
 ## Controls 🕹️
 
-- **Arrow Keys** — Move your soul
-- **Enter** — Start the game
-- **Backspace** — Restart from the title screen
-- **Left Arrow (←)** — Activate Impossible Mode after winning
+- Arrow Keys — Move your soul
+- Enter — Start the game
+- Backspace — Restart from the title screen
+- Left Arrow (←) — Activate Impossible Mode after winning
 
----
-
-## How to Run 🚀
-
-### Requirements
+## Requirements
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - CS 2110 Docker image: `gtcs2110/cs2110docker-c:stable-gba`
 - mGBA emulator (runs automatically inside the Docker container)
 
----
+## Setup Instructions
 
-### Setup Instructions
-
-1. **Clone the Repository**
+1. Clone the Repository
 
    ```bash
    git clone https://github.com/vishruthanand08/walk-of-fire-gba.git
    cd walk-of-fire-gba
    ```
 
-2. **Start the Docker Container**
+2. Start the Docker Container**
 
    ```bash
    ./cs2110docker-c.sh start
@@ -56,7 +47,7 @@ You just died. For your soul’s chance at heaven, you must survive the fire, av
 
    This pulls the image and mounts your project inside the container.
 
-3. **Run the Game in mGBA**
+3. Run the Game in mGBA
 
    ```bash
    cd host
@@ -65,7 +56,7 @@ You just died. For your soul’s chance at heaven, you must survive the fire, av
 
    This compiles the `.gba` ROM and launches the emulator.
 
-4. **Stop the Docker Container (when done)**
+4. Stop the Docker Container (when done)
 
    ```bash
    ./cs2110docker-c.sh stop
@@ -88,16 +79,9 @@ You just died. For your soul’s chance at heaven, you must survive the fire, av
 
 ## Author 👤
 
-**Vishruth Anand**  
-CS 2110 @ Georgia Tech
-
----
+Vishruth Anand
 
 ## License 📜
 
 This project was built as part of CS 2110 and is for educational use only.
 
-
-## 📜 License
-
-This project is for educational use only — developed as part of the CS 2110 coursework.
