@@ -1,107 +1,102 @@
-# 🔥 The Walk of Fire
+# The Walk of Fire 🔥
 
 **The Walk of Fire** is a Game Boy Advance (GBA) game developed in C for CS 2110 at Georgia Tech.  
-Inspired by games like *World's Hardest Game*, this adventure drops you into hell where you must guide your soul through waves of fire to reach salvation.
+Inspired by *World's Hardest Game*, this GBA adventure drops you into hell, where you must guide your soul through waves of fire to reach salvation.
 
 ---
 
-## 🎮 Gameplay
+## Gameplay 🎮
 
-You just died. For your soul’s chance at heaven, you must survive the fire, avoid being hit in the heart, and make it to the right side of the screen.  
+You just died. For your soul’s chance at heaven, you must survive the fire, avoid being hit in the heart, and make it to the right side of the screen.
 
-### Features:
-- 🔥 **Dynamic Fireballs:** Fall and rise in randomized patterns.
-- 🧘‍♂️ **Karma System:** Dodge fireballs to earn karma.
-- 🧱 **State Machine:** Title screen, gameplay, win/lose screens, and "Impossible Mode".
-- ⏱️ **Score Tracker:** Shows how many fireballs you’ve dodged.
-- 🎨 **Custom Sprites:** Built with [nin10kit](https://github.com/TricksterGuy/nin10kit/raw/master/readme.pdf)
-- 😈 **Impossible Mode:** Unlocked after winning once.
+### Features
 
----
-
-## 🕹️ Controls
-
-| Button        | Action                                |
-|---------------|----------------------------------------|
-| Arrow Keys    | Move your soul                        |
-| `Enter`       | Start game                            |
-| `Backspace`   | Restart from title screen             |
-| `←` (on Win)  | Enter Impossible Mode                 |
+- 🔥 Dynamic Fireballs: Fall and rise in randomized patterns.
+- 🧘‍♂️ Karma System: Dodge fireballs to earn karma.
+- 🧱 State Machine: Title screen, gameplay, win/lose screens, and "Impossible Mode".
+- ⏱️ Score Tracker: Displays how many fireballs you’ve dodged.
+- 🎨 Custom Sprites: Created using [nin10kit](https://github.com/TricksterGuy/nin10kit/raw/master/readme.pdf).
+- 😈 Impossible Mode: Unlocked after completing normal mode.
 
 ---
 
-## 🚀 How to Build & Run
+## Controls 🕹️
 
-### 📦 Requirements
+- **Arrow Keys** — Move your soul
+- **Enter** — Start the game
+- **Backspace** — Restart from the title screen
+- **Left Arrow (←)** — Activate Impossible Mode after winning
+
+---
+
+## How to Run 🚀
+
+### Requirements
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- CS 2110 Docker Image: `gtcs2110/cs2110docker-c:stable-gba`
-- The mGBA emulator (runs automatically inside the container)
+- CS 2110 Docker image: `gtcs2110/cs2110docker-c:stable-gba`
+- mGBA emulator (runs automatically inside the Docker container)
 
 ---
 
-### 🧪 Step-by-Step Instructions
+### Setup Instructions
 
-#### 1. Clone the Repo & Enter the Directory
+1. **Clone the Repository**
 
-```bash
-git clone https://github.com/vishruthanand08/walk-of-fire-gba.git
-cd walk-of-fire-gba
-```
+   ```bash
+   git clone https://github.com/vishruthanand08/walk-of-fire-gba.git
+   cd walk-of-fire-gba
+   ```
 
-#### 2. Start the Docker Container
+2. **Start the Docker Container**
 
-```bash
-./cs2110docker-c.sh start
-```
+   ```bash
+   ./cs2110docker-c.sh start
+   ```
 
-> This mounts your project into the Docker container and pulls the correct image.
+   This pulls the image and mounts your project inside the container.
 
-#### 3. Inside the Docker Container, Run:
+3. **Run the Game in mGBA**
 
-```bash
-cd host
-make mgba
-```
+   ```bash
+   cd host
+   make mgba
+   ```
 
-> This compiles the `.gba` ROM and automatically launches it in the mGBA emulator.
+   This compiles the `.gba` ROM and launches the emulator.
 
----
+4. **Stop the Docker Container (when done)**
 
-### 🛑 To Stop the Docker Container
-
-```bash
-./cs2110docker-c.sh stop
-```
+   ```bash
+   ./cs2110docker-c.sh stop
+   ```
 
 ---
 
-## 📁 Project Structure
+## File Structure 📁
 
-| File / Folder         | Purpose                                 |
-|------------------------|------------------------------------------|
-| `main.c`              | Game state machine and gameplay logic    |
-| `gba.c` / `gba.h`     | DMA, pixel, and screen drawing functions |
-| `images/`             | Sprite/image assets from nin10kit        |
-| `client.c`            | Docker socket bridge for emulator        |
-| `cs2110docker-c.sh`   | Script to manage Docker container        |
-| `Makefile`            | Build logic, GDB support, emulator calls |
-
----
-
-## 📸 Screenshots
-
-*Coming soon!* Add images like `images/fires.png`, `images/heaven.png`, or even a GIF of gameplay.
+| File/Folder         | Description                                      |
+|---------------------|--------------------------------------------------|
+| `main.c`            | Game logic, state machine                        |
+| `gba.c` / `gba.h`   | Drawing utilities, screen & pixel control        |
+| `images/`           | Sprite assets (created with nin10kit)           |
+| `client.c`          | Sends ROM to emulator through Docker             |
+| `cs2110docker-c.sh` | Script for managing Docker container             |
+| `Makefile`          | Build process, GBA toolchain commands            |
 
 ---
 
-## 👤 Author
+## Author 👤
 
 **Vishruth Anand**  
-CS 2110 - Georgia Tech  
-*The Walk of Fire*
+CS 2110 @ Georgia Tech
 
 ---
+
+## License 📜
+
+This project was built as part of CS 2110 and is for educational use only.
+
 
 ## 📜 License
 
